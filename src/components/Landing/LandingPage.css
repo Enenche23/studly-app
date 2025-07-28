@@ -1,0 +1,236 @@
+:root {
+  --primary: #3a86ff;
+  --accent: #ff006e;
+  --text-gradient: linear-gradient(90deg, #3a86ff, #ff006e);
+  --card-bg: rgba(10, 10, 15, 0.8);
+  --dark-bg: #000000;
+  --text-muted: rgba(255,255,255,0.7);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--dark-bg);
+  color: white;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  background: rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav a {
+  color: #eee;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav a:hover { color: var(--primary); }
+
+.btn {
+  padding: 0.6rem 1.3rem;
+  border: none;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--text-gradient);
+  color: #000;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 50px;
+  animation: fadeInUp 1s ease both;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtext {
+  color: var(--text-muted);
+  margin: 1rem 0;
+  animation: fadeInUp 1.2s ease both;
+}
+
+.actions {
+  margin: 1rem 0;
+  animation: fadeInUp 1.4s ease both;
+}
+
+.metrics {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid var(--primary);
+}
+
+.metric-card h2 {
+  font-size: 2rem;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-choose, .mission, .faq, .cta {
+  padding: 3rem 1rem;
+  text-align: center;
+  animation: fadeInUp 1s ease both;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid var(--accent);
+}
+
+.feature-card h3 {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.faq-container details {
+  margin: 0.5rem 0;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.7rem;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.faq-container details:hover {
+  transform: translateY(-3px);
+  border: 1px solid var(--primary);
+}
+
+/* Section titles: bold neon gradient + underline + subtle animation */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  position: relative;
+  animation: neonPulse 4s infinite alternate;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--text-gradient);
+  border-radius: 2px;
+  margin: 0.5rem auto;
+}
+
+.cta h2 {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+footer {
+  padding: 2rem;
+  background: #000;
+  text-align: center;
+  color: #888;
+}
+
+footer strong {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes neonPulse {
+  0% { text-shadow: 0 0 5px var(--primary), 0 0 10px var(--accent); }
+  100% { text-shadow: 0 0 20px var(--accent), 0 0 40px var(--primary); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .metrics {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  header {
+    flex-direction: column;
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

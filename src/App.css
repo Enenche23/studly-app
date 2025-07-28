@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+/* App.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Plus+Jakarta+Sans:wght@500;700&display=swap');
+
+:root {
+  --primary: #3a86ff;
+  --accent: #ff006e;
+  --text-gradient: linear-gradient(90deg, #3a86ff, #ff006e);
+  --text-gradient-vertical: linear-gradient(to bottom, #3a86ff, #ff006e);
+  --card-bg: rgba(10, 10, 15, 0.8);
+  --dark-bg: #000000;
+  --darker-bg: #050505;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--dark-bg);
+  color: #fff;
+  overflow-x: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+/* Buttons (shared) */
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-outline:hover {
+  color: #000;
+  border-color: var(--primary);
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--text-gradient);
+  transition: all 0.4s;
+  z-index: -1;
+}
+
+.btn-outline:hover::before {
+  left: 0;
+}
+
+.btn-primary {
+  background: var(--text-gradient);
+  color: #000;
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #2a76e6, #e60063);
 }
