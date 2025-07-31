@@ -1,10 +1,10 @@
-import React from "react";
-import "./LandingPage.css";
+import React from 'react';
+import './WhyChoose.css';
 
 export default function WhyChoose() {
   return (
     <section className="why-choose" id="features">
-      <h2 data-aos="fade-up">Why Choose Studly?</h2>
+      <h2 className="section-heading" data-aos="fade-up">Why Choose Studly?</h2>
       <div className="features-grid">
         <FeatureCard title="Interactive Learning" text="Scroll through study like it's your feed - quick, clean, and built the way you'll actually learn." delay="0" />
         <FeatureCard title="Built by Students" text="Created by students who get the struggle, no stress, just smart support to help you pass with ease." delay="100" />
