@@ -1,29 +1,44 @@
 import React from 'react';
-import './WhyChoose.css';
+import './LandingPage.css';
 
 export default function WhyChoose() {
   return (
     <section className="why-choose" id="features">
       <h2 className="section-heading" data-aos="fade-up">Why Choose Studly?</h2>
       <div className="features-grid">
-        <FeatureCard title="Interactive Learning" text="Scroll through study like it's your feed - quick, clean, and built the way you'll actually learn." delay="0" />
-        <FeatureCard title="Built by Students" text="Created by students who get the struggle, no stress, just smart support to help you pass with ease." delay="100" />
-        <FeatureCard title="Study Smarter" text="Flash summaries, fast quizzes, everything you need to learn more in less time (and still have a life)." delay="200" />
-        <FeatureCard title="Studlygram" text="Turn your scroll sessions into study wins, learn on the go, whenever, wherever." delay="300" />
-        <FeatureCard title="Free Forever" text="The essentials stay free, no paywalls, no catches, just pure student support." delay="400" />
-        <FeatureCard title="No More Info Overload" text="We break down the tough stuff so you don't have to scroll through 100 slides to get it." delay="500" />
-        <FeatureCard title="Everything in One Place" text="Notes, quizzes, flashcards, all synced to your course. No chaos, just click and go." delay="600" />
-        <FeatureCard title="Built for the Hustle" text="Whether you're cramming at 2 AM or revising on the move, Studly's got your back 24/7." delay="700" />
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Bite-sized notes</h3>
+          <p>Condensed, easy-to-digest study material tailored for quick learning.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Interactive quizzes</h3>
+          <p>Test your knowledge with fun, gamified quizzes that keep you engaged.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="300">
+          <h3>Community-driven</h3>
+          <p>Join a vibrant community of learners sharing tips and resources.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="400">
+          <h3>AI-powered insights</h3>
+          <p>Personalized study recommendations to maximize your efficiency.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="500">
+          <h3>Daily challenges</h3>
+          <p>Stay motivated with streaks and rewards for consistent studying.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="600">
+          <h3>Custom playlists</h3>
+          <p>Create study playlists tailored to your courses and goals.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="700">
+          <h3>Progress tracking</h3>
+          <p>Monitor your learning journey with detailed analytics.</p>
+        </div>
+        <div className="feature-card" data-aos="fade-up" data-aos-delay="800">
+          <h3>Offline access</h3>
+          <p>Study anywhere with downloadable content for offline use.</p>
+        </div>
       </div>
     </section>
-  );
-}
-
-function FeatureCard({ title, text, delay }) {
-  return (
-    <div className="feature-card" data-aos="fade-up" data-aos-delay={delay}>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
   );
 }

@@ -1,6 +1,5 @@
-// src/components/Landing/Footer.js
 import React from 'react';
-import './Footer.css';
+import './LandingPage.css';
 
 export default function Footer() {
   return (

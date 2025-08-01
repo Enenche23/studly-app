@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FAQ.css';
+import './LandingPage.css';
 
 export default function FAQ() {
   const [expanded, setExpanded] = useState(null);
@@ -25,7 +25,7 @@ export default function FAQ() {
         {faqs.map((faq, index) => (
           <div className="faq-item" key={index}>
             <div className="faq-question" onClick={() => toggleFAQ(index)}>
-              <span>{faq.question}</span>
+              <span className={expanded === index ? 'expanded' : ''}>{faq.question}</span>
               <span className={`arrow ${expanded === index ? 'expanded' : ''}`}>
                 {expanded === index ? '▲' : '▼'}
               </span>

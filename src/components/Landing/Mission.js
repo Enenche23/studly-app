@@ -1,13 +1,15 @@
 import React from 'react';
-import './Mission.css';
+import './LandingPage.css';
 
 export default function Mission() {
   return (
     <section className="mission" id="about">
       <h2 className="section-heading" data-aos="fade-up">Our Mission</h2>
-      <p data-aos="fade-up" data-aos-delay="100">
-        We're flipping the script on boring education. Studly blends social media vibes with game-like learning to make studying feel less like work and more like a scroll you actually enjoy.
-      </p>
+      <div className="mission-content" data-aos="fade-up" data-aos-delay="100">
+        <p>
+          At Studly, we're redefining how students learn by blending cutting-edge tech with the way Gen Z already engages online. Our platform delivers bite-sized, interactive, and community-driven content to make studying feel less like a chore and more like a vibe.
+        </p>
+      </div>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import './LandingPage.css';
 
 export default function Hero() {
   return (
@@ -7,7 +7,7 @@ export default function Hero() {
       <h1 data-aos="fade-up">Study Chaos?</h1>
       <h1 data-aos="fade-up" data-aos-delay="200">Studly Solves!</h1>
       <p className="subtext" data-aos="fade-up" data-aos-delay="400">
-        Tap In. Learn Fast. Level Up
+        Tap in. Learn fast. Level up.
       </p>
       <div className="actions" data-aos="fade-up" data-aos-delay="600">
         <a href="/auth">
